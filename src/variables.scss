@@ -1,0 +1,48 @@
+
+//App Constants
+
+$menu-color:  #7E8795;
+$success-green: #4CAF50;
+$green: #008744;
+$blue: #0057e7;
+$red: #d62d20;
+$yellow: #ffa700;
+$white: #eceff1;
+$sapphire-blue: #2F96E9;
+
+$montserrat-black: 'Montserrat-Black' !default;
+$montserrat-bold: 'Montserrat-Bold' !default;
+$montserrat-light: 'Montserrat-Light' !default;
+$montserrat-regular: 'Montserrat-Regular' !default;
+$montserrat-semibold: 'Montserrat-SemiBold' !default;
+$montserrat-medium: 'Montserrat-Medium' !default;
+$quantico-regular: 'Quantico-Regular' !default;
+$font-path: "/assets/fonts" !default;
+
+/*Mixin for font faces*/
+@mixin font-faces($font-name, $font-path) {
+    @font-face {
+        font-family: $font-name;
+        
+        src: url('#{$font-path}/#{$font-name}.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@include font-faces($montserrat-black,
+$font-path);
+@include font-faces($montserrat-bold,
+$font-path);
+@include font-faces($montserrat-light,
+$font-path);
+@include font-faces($montserrat-regular,
+$font-path);
+@include font-faces($montserrat-semibold,
+$font-path);
+@include font-faces($montserrat-medium,
+$font-path);
+@include font-faces($quantico-regular,
+$font-path);
+
+$spa-active-link-color :  #8BC34A;

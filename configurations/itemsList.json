@@ -1,0 +1,57 @@
+{
+  "currentLevel": "product",
+  "levelName": "Product",
+  "hasNextLevel": true,
+  "settings": {
+    "widgetslist": [
+      {
+        "WidgetId": "001",
+        "dataSourceIds": [
+          {
+            "dataSourceId": "UPH"
+          }
+        ],
+        "type": "miniWidget"
+      }
+    ],
+    "_comment": "widgetPositions is optional, use only if we want to store each widget positions",
+    "widgetPositions": [
+      {
+        "widgetId": "001",
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      }
+    ]
+  },
+  "itemList": {
+    "settings": [
+      {
+        "widgetId": "prod_jh1",
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 1
+      }
+    ],
+    "items": [
+      {
+        "itemName": "JH 1",
+        "id": "prod_jh1",
+        "type": "miniGroup",
+        "properties": ""
+      },
+      {
+        "itemName": "JH 2",
+        "id": "prod_jh2",
+        "type": "miniGroup"
+      },
+      {
+        "itemName": "JH 3",
+        "id": "prod_jh3",
+        "type": "miniGroup"
+      }
+    ]
+  }
+}

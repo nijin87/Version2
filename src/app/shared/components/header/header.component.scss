@@ -1,0 +1,22 @@
+.spa-header{
+    .spa-logo{
+        width: 150px;
+        height: auto;
+    }
+    .spa-logo-div{
+        padding: 10px 50px;
+    }
+    .spa-active-link{
+        font-weight: bold;
+        color: #282c37;
+        font-family: MonteserratBold;
+        border-bottom: 4px solid #8BC34A;
+    }
+}
+@media screen and (max-width: 400px){
+    .spa-header{
+        .spa-logo-div{
+            padding: 5px 25px;
+        }
+    }
+  }

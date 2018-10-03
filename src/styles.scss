@@ -1,0 +1,129 @@
+ @import "variables.scss";
+
+    @-webkit-keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+    @-moz-keyframes spin{0%{-moz-transform:rotate(0)}100%{-moz-transform:rotate(360deg)}}
+    @keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.spinner{
+      position:fixed;top:0;left:0;width:100%;height:100%;z-index:1051;background: #000000; opacity: .8; overflow:hidden
+      } .spinner div:first-child{
+        display:block;position:relative;left:50%;top:50%;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;
+        box-shadow:0 3px 3px 0 rgb(255, 255, 255);transform:translate3d(0,0,0);animation:spin 2s linear infinite} 
+        .spinner div:first-child:after,.spinner div:first-child:before{content:'';position:absolute;border-radius:50%} 
+        .spinner div:first-child:before{top:5px;left:5px;right:5px;bottom:5px;box-shadow:0 3px 3px 0 rgb(255, 228, 32);
+        -webkit-animation:spin 3s linear infinite;animation:spin 3s linear infinite} 
+        .spinner div:first-child:after{top:15px;left:15px;right:15px;bottom:15px;box-shadow:0 3px 3px 0 rgba(47, 150, 233, 1);
+        animation:spin 1.5s linear infinite}
+
+.spa-.active-link{
+  color: #000000;
+  font-weight: 900;
+  border-bottom: 3px solid $spa-active-link-color;
+}
+.spa-nav-icons {
+  img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  .devices {
+    fill: $success-green;
+  }
+  .report {
+    fill: #F44336;
+  }
+}
+.spa-nav-inactive{
+  color: #7E8795;
+  padding: 0px 25px;
+    display: block;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: MonteserratMedium;
+    color: #7E8795;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+.spa-itemsanimation{
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  background-color: $sapphire-blue;
+}
+.spa-nav-inactive-color :hover {
+  color: $sapphire-blue;
+}
+.spa-active-link{
+  color: #000;
+}
+.spa-middle-container, .spa-navbar-parent .navbar-toggler, .navbar-toggler{
+  background: $sapphire-blue;
+}
+.spa-language-icon{
+  img {
+    border-radius: 50%;
+  }
+}
+.spa-middle-container{
+  height: 55px;
+  width: auto;
+}
+.spa-language-popup-visibility {
+  //position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 500ms;
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.spa-pop-outer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 500ms;
+  opacity: 1;
+  margin: 0% 25.3%;
+  top: 2.5%;
+}
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.langpopup{
+  //margin: 50px 40px 0px 0px;
+  float: right;
+  padding: 10px;
+  background: #ffffff;
+  z-index: 15;
+  position: element(#spa-language-id);
+  transition: all 5s ease-in-out;
+  line-height: 0px !important;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.flag{
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+        

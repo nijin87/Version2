@@ -1,0 +1,86 @@
+<div class="row spa-header">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 spa-logo-div">
+            <img class="spa-logo" src="assets/images/logo.png">
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+            <nav class="navbar navbar-expand-lg col-lg-8 col-md-8 col-sm-8 col-xs-12 spa-navbar-parent">
+                <button class="navbar-toggler navbar-light" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" type="button" (click)="toggleNavbar()">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen}">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link spa-nav-inactive" routerLinkActive="spa-active-link" href="#home">
+                                                            {{'Home' | translate : languageService.lastUpdatedTime}}
+                                     </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link spa-nav-inactive" href="#DashBoard" routerLinkActive="spa-active-link">
+                                                            {{'Dashboard' | translate : languageService.lastUpdatedTime}}
+                                                        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link spa-nav-inactive" href="#kpi" routerLinkActive="spa-active-link">
+                                                            {{'KPI' | translate : languageService.lastUpdatedTime}}
+                                                        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link spa-nav-inactive" href="#unithistory" routerLinkActive="spa-active-link">
+                                                            {{'Unit History' | translate : languageService.lastUpdatedTime}}
+                                                        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link spa-nav-inactive" href="#eventlog" routerLinkActive="spa-active-link">
+                                                            {{'Event Log' | translate : languageService.lastUpdatedTime}}
+                                                        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link spa-nav-inactive" href="#report" routerLinkActive="spa-active-link">
+                                                            {{'Report' | translate : languageService.lastUpdatedTime}}
+                                                        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link spa-nav-inactive" href="#support" routerLinkActive="active-link">
+                                                            {{'Support' | translate : languageService.lastUpdatedTime}}
+                                                        </a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 spa-nav-icons">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                <img src="assets/images/device.svg">
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                <i class="fa fa-bell-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 spa-language-icon" id="spa-language-id" (click)="tooglelanguage()">
+                                <img [src]="langIcon">
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                <img src="assets/images/default-user-icon.png">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- <p>Language Translation : {{ 'Dashboard'| translate : languageService.lastUpdatedTime}}</p> 
+    <h1> {{dateTimes}}</h1><br> <h2>{{ dateTimesConverted | date : 'medium' : 'EST' : LOCALE_ID }}</h2> CST -->
+    <div class="spa-pop-outer" *ngIf="langPopup" [ngClass]="{'spa-language-popup-visibility': langPopup}">
+            <div class="langpopup">
+              <div class="content">
+                  <span (click)="changeLanguage('zh-CN')" class="test">
+                    <img src="assets/images/china-full.svg" (click)="changeLanguage('zh-CN')"  class="flag">
+                  </span>
+                <br>
+                <span (click)="changeLanguage('en')" class="test">
+                    <img src="assets/images/us-full.svg"    class="flag">
+                </span>
+              </div>
+        </div>
+    </div>
+
+                
+
+    
